@@ -1,0 +1,26 @@
+/* START CSS*/
+
+#mainBackground {
+    background-color: seashell;
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 72px;
+    margin-top:50px;
+    z-index: 1;
+    /* height: 300px; */
+    min-height: 100%;
+    padding: 50px;
+}
+
+.btn-block {
+    background-color: seagreen;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 200px;
+}
+.question {
+    size: 24px;
+}
+/* END CSS*/
