@@ -17,62 +17,39 @@ $(document).ready(function(){
 $("#start-button").on("click", function() {
     $("#start-button").hide();
     $("#questionAnswer").show();
-    
+
     var question = "FartButt";
     var optionA = 1;
     var optionB = 2;
     var optionC = 3;
     var optionD = 4;
     var number = 30;
-
+    
     var questionHTML =
-            "<h2>Time Remaining:" + number + "<h2>" +
-            "<h1>" + question + "<h1>" +
-            "<p>" + optionA + "<p>" +
-            "<p>" + optionB + "<p>" +
-            "<p>" + optionC + "<p>" +
-            "<p>" + optionD + "<p>";
-            $("#questionAnswer").html(questionHTML);  
+    // "<h2>Time Remaining:" + number + "<h2>" +
+    "<h1>" + question + "<h1>" +
+    "<p>" + optionA + "<p>" +
+    "<p>" + optionB + "<p>" +
+    "<p>" + optionC + "<p>" +
+    "<p>" + optionD + "<p>";
+    $("#questionAnswer").html(questionHTML);  
 
-// $("#start-button").on("click", number.start);
-// function start () {
-// clearInterval(intervalID);
-// intervalID = setInterval(decrement, 1000);
-// }
-// function decrement () {
-//     number--;
 
-// questionHTML;
-// console.log(number);
-// }
+            intervalID  = setInterval (decrement, 1000);
+            function decrement (){
+                number--;
+                console.log(number);
+         
+            }
+
     
     
+    
+    
+        })
     
     
 })
-})
-    // function run() {
-
-    //     clearInterval(intervalId);
-    //     intervalId = setInterval(number.decrement, 1000);
-    
-    // function decrement (){
-    //     number--;
-
-//     var questionHTML =
-//             "<h2>Time Remaining:" + number.run(); + "<h2>" +
-//             "<h1>" + question + "<h1>" +
-//             "<p>" + optionA + "<p>" +
-//             "<p>" + optionB + "<p>" +
-//             "<p>" + optionC + "<p>" +
-//             "<p>" + optionD + "<p>";
-//             $("#questionAnswer").html(questionHTML);  
-// console.log(number);
-        // }
-        // }
-
-
-
 
 
 /* End Javascript*/
