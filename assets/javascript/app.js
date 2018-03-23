@@ -13,36 +13,101 @@
 
 $(document).ready(function(){
     $("#questionAnswer").hide();
+    $("#winner").hide();
+    $("#loser").hide();
         
 $("#start-button").on("click", function() {
     $("#start-button").hide();
     $("#questionAnswer").show();
 
-    var question = "FartButt";
-    var optionA = 1;
-    var optionB = 2;
-    var optionC = 3;
-    var optionD = 4;
+
+var question1 = {
+    question: "Question1",
+    AnswerA: "AnswerA",
+    AnswerB: "AnswerB",
+    AnswerC: "AnswerC",
+    AnswerD: "AnswerD",
+}
+
+var question2 = {
+    question: "Question2",
+    AnswerA: "AnswerA",
+    AnswerB: "AnswerB",
+    AnswerC: "AnswerC",
+    AnswerD: "AnswerD",
+}
+var question3 = {
+    question: "Question3",
+    AnswerA: "AnswerA",
+    AnswerB: "AnswerB",
+    AnswerC: "AnswerC",
+    AnswerD: "AnswerD",
+}
+var question4 = {
+    question: "Question4",
+    AnswerA: "AnswerA",
+    AnswerB: "AnswerB",
+    AnswerC: "AnswerC",
+    AnswerD: "AnswerD",
+}
+var question5 = {
+    question: "Question5",
+    AnswerA: "AnswerA",
+    AnswerB: "AnswerB",
+    AnswerC: "AnswerC",
+    AnswerD: "AnswerD",
+}
+var question6 = {
+    question: "Question6",
+    AnswerA: "AnswerA",
+    AnswerB: "AnswerB",
+    AnswerC: "AnswerC",
+    AnswerD: "AnswerD",
+}
+var question7 = {
+    question: "Question7",
+    AnswerA: "AnswerA",
+    AnswerB: "AnswerB",
+    AnswerC: "AnswerC",
+    AnswerD: "AnswerD",
+}
+var question8 = {
+    question: "Question8",
+    AnswerA: "AnswerA",
+    AnswerB: "AnswerB",
+    AnswerC: "AnswerC",
+    AnswerD: "AnswerD",
+}
+    var question = question1.question;
+    var optionA = question1.AnswerA;
+    var optionB = question1.AnswerB;
+    var optionC = question1.AnswerC;
+    var optionD = question1.AnswerD;
     var number = 30;
     
-    var questionHTML =
-    // "<h2>Time Remaining:" + number + "<h2>" +
-    "<h1>" + question + "<h1>" +
-    "<p>" + optionA + "<p>" +
-    "<p>" + optionB + "<p>" +
-    "<p>" + optionC + "<p>" +
-    "<p>" + optionD + "<p>";
-    $("#questionAnswer").html(questionHTML);  
+    $("#display").html(number);  
+    $("#question").html(question);  
+    $("#optionA").html(optionA);  
+    $("#optionB").html(optionB);
+    $("#optionC").html(optionC);
+    $("#optionD").html(optionD);
 
-
-            intervalID  = setInterval (decrement, 1000);
-            function decrement (){
-                number--;
-                console.log(number);
-         
+    intervalID  = setInterval (decrement, 1000);
+    function decrement (){
+        number--;
+        console.log(number);
+        $("#display").html(number);  
+        $("#question").html(question);  
+        $("#optionA").html(optionA);  
+        $("#optionB").html(optionB);
+        $("#optionC").html(optionC);
+        $("#optionD").html(optionD);
             }
-
-    
+    $("#optionA").on("click", function () {
+        $("#questionAnswer").hide();
+        $("#winner").show();
+        
+    })        
     
     
     
