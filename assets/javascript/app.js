@@ -13,108 +13,121 @@
 
 $(document).ready(function(){
     $("#questionAnswer").hide();
+    $(".button").hide();
     $("#winner").hide();
     $("#loser").hide();
-        
-$("#start-button").on("click", function() {
-    $("#start-button").hide();
-    $("#questionAnswer").show();
 
-
-var question1 = {
-    question: "Question1",
-    AnswerA: "AnswerA",
-    AnswerB: "AnswerB",
-    AnswerC: "AnswerC",
-    AnswerD: "AnswerD",
-}
-
-var question2 = {
-    question: "Question2",
-    AnswerA: "AnswerA",
-    AnswerB: "AnswerB",
-    AnswerC: "AnswerC",
-    AnswerD: "AnswerD",
-}
-var question3 = {
+var questions = [{
+    question: "What is the world's largest island?",
+    AnswerA: "Greenland",
+    AnswerB: "Jamaica",
+    AnswerC: "Australia",
+    AnswerD: "Cuba",
+    correct: "Greenland"
+},
+ {
+    question: "What is the main industry of Fiji?",
+    AnswerA: "Farming",
+    AnswerB: "Finance",
+    AnswerC: "Sugar Cane Processing",
+    AnswerD: "Surfing",
+    correct: "Sugar Cane Processing"
+},
+{
     question: "Question3",
     AnswerA: "AnswerA",
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
-}
-var question4 = {
+},
+ {
     question: "Question4",
     AnswerA: "AnswerA",
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
-}
-var question5 = {
+},
+{
     question: "Question5",
     AnswerA: "AnswerA",
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
-}
-var question6 = {
+},
+{
     question: "Question6",
     AnswerA: "AnswerA",
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
-}
-var question7 = {
+},
+ {
     question: "Question7",
     AnswerA: "AnswerA",
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
-}
-var question8 = {
+},
+{
     question: "Question8",
     AnswerA: "AnswerA",
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
-}
-    var question = question1.question;
-    var optionA = question1.AnswerA;
-    var optionB = question1.AnswerB;
-    var optionC = question1.AnswerC;
-    var optionD = question1.AnswerD;
-    var number = 30;
-    
-    $("#display").html(number);  
-    $("#question").html(question);  
-    $("#optionA").html(optionA);  
-    $("#optionB").html(optionB);
-    $("#optionC").html(optionC);
-    $("#optionD").html(optionD);
+}];
 
+var number = 30;
+
+$("#start-button").on("click", function() {
+    $("#start-button").hide();
+    $("#questionAnswer").show();
+    $(".button").show();
+
+   
+
+    for (var i = 0; i < questions.length; i++) {
+
+    $("#display").html( "Time Remaining:" + number);  
+    $("#question").text(questions[i].question);  
+    $("#optionA").text(questions[i].AnswerA);  
+    $("#optionB").text(questions[i].AnswerB);
+    $("#optionC").text(questions[i].AnswerC);
+    $("#optionD").text(questions[i].AnswerD);
     intervalID  = setInterval (decrement, 1000);
     function decrement (){
         number--;
-        console.log(number);
-        $("#display").html(number);  
-        $("#question").html(question);  
-        $("#optionA").html(optionA);  
-        $("#optionB").html(optionB);
-        $("#optionC").html(optionC);
-        $("#optionD").html(optionD);
-            }
-    $("#optionA").on("click", function () {
-        $("#questionAnswer").hide();
-        $("#winner").show();
-        
-    })        
+     console.log(number);
+     $("#display").html( "Time Remaining:" + number);  
     
-    
-    
-        })
-    
-    
+
+}
+    $("button").on("click", function () {  
+    if(this.innerHTML === questions[i].correct){
+            $("#questionAnswer").hide();
+            $(".button").hide();
+            $("#question").hide();
+            $("#winner").show(); 
+        } else if (this.innerHTML !== questions[i].correct){
+            $("#questionAnswer").hide();
+            $(".button").hide();
+            $("#question").hide();
+            $("#loser").show();
+        } 
 })
+
+break;
+
+
+}
+
+})
+
+})
+
+    
+
+      
+  
 
 
 /* End Javascript*/

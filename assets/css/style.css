@@ -14,13 +14,28 @@
     padding: 50px;
 }
 
-.btn-block {
+.button {
     background-color: seagreen;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-top: 200px;
+    height: auto;
+    width: auto;
+    font-size: 24px;
 }
-.question {
-    size: 24px;
+#question {
+    font-size: 48px;
+    
+}
+#display{
+    font-size: 24px;
+    color: seagreen;
+}
+#winner{
+    font-size: 48px;
+    color: seagreen;
+}
+#loser{
+    font-size: 48px;
+    color: seagreen;
 }
 /* END CSS*/
