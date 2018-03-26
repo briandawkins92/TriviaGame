@@ -39,6 +39,7 @@ var questions = [{
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
+    correct: "AnswerD"
 },
  {
     question: "Question4",
@@ -46,6 +47,7 @@ var questions = [{
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
+    correct: "AnswerA"
 },
 {
     question: "Question5",
@@ -53,6 +55,7 @@ var questions = [{
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
+    correct: "AnswerB"
 },
 {
     question: "Question6",
@@ -60,6 +63,7 @@ var questions = [{
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
+    correct: "AnswerB"
 },
  {
     question: "Question7",
@@ -67,6 +71,7 @@ var questions = [{
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
+    correct: "AnswerD"
 },
 {
     question: "Question8",
@@ -74,6 +79,7 @@ var questions = [{
     AnswerB: "AnswerB",
     AnswerC: "AnswerC",
     AnswerD: "AnswerD",
+    correct: "AnswerA"
 }];
 
 var number = 30;
@@ -83,42 +89,73 @@ $("#start-button").on("click", function() {
     $("#questionAnswer").show();
     $(".button").show();
 
-   
+    intervalID  = setInterval (decrement, 1000);
+    function decrement (){
+        number--;
+     console.log(number);
+     $("#display").html( "Time Remaining:" + number);  
+    }
 
-    for (var i = 0; i < questions.length; i++) {
 
+       var i = Math.floor(Math.random () * 8);
+
+
+     console.log(i);
+function questionText () {
     $("#display").html( "Time Remaining:" + number);  
     $("#question").text(questions[i].question);  
     $("#optionA").text(questions[i].AnswerA);  
     $("#optionB").text(questions[i].AnswerB);
     $("#optionC").text(questions[i].AnswerC);
     $("#optionD").text(questions[i].AnswerD);
-    intervalID  = setInterval (decrement, 1000);
-    function decrement (){
-        number--;
-     console.log(number);
-     $("#display").html( "Time Remaining:" + number);  
-    
-
 }
-    $("button").on("click", function () {  
+
+questionText (i);
+
+$("button").on("click", function () {  
+ 
     if(this.innerHTML === questions[i].correct){
             $("#questionAnswer").hide();
             $(".button").hide();
             $("#question").hide();
-            $("#winner").show(); 
+            $("#winner").show();
+            setTimeout (nextQuestion, 3000);
+            function nextQuestion () {
+                i = Math.floor(Math.random () * 8);
+                console.log(i);
+                questionText (i);
+                number = 30;
+                $("#winner").hide();
+                $("#loser").hide();
+                $("#questionAnswer").show();
+            $(".button").show();
+            $("#question").show();
+            }
+    
         } else if (this.innerHTML !== questions[i].correct){
             $("#questionAnswer").hide();
             $(".button").hide();
             $("#question").hide();
             $("#loser").show();
-        } 
+            setTimeout (nextQuestion, 3000);
+            function nextQuestion () {
+                i = Math.floor(Math.random () * 8);
+                console.log(i);
+                questionText (i);
+                number = 30;
+                $("#winner").hide();
+                $("#loser").hide();
+                $("#questionAnswer").show();
+            $(".button").show();
+            $("#question").show();
+            }
+        }
+
+
 })
 
-break;
+// }
 
-
-}
 
 })
 
