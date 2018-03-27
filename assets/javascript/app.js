@@ -34,52 +34,52 @@ var questions = [{
     correct: "Sugar Cane Processing"
 },
 {
-    question: "Question3",
-    AnswerA: "AnswerA",
-    AnswerB: "AnswerB",
-    AnswerC: "AnswerC",
-    AnswerD: "AnswerD",
-    correct: "AnswerD"
+    question: "Great Britian is the world's ______ largest island",
+    AnswerA: "6th",
+    AnswerB: "7th",
+    AnswerC: "8th",
+    AnswerD: "9th",
+    correct: "9th"
 },
  {
-    question: "Question4",
-    AnswerA: "AnswerA",
-    AnswerB: "AnswerB",
-    AnswerC: "AnswerC",
-    AnswerD: "AnswerD",
-    correct: "AnswerA"
+    question: "Hawaii became a state in________.",
+    AnswerA: "1959",
+    AnswerB: "1969",
+    AnswerC: "1949",
+    AnswerD: "1939",
+    correct: "1959"
 },
 {
-    question: "Question5",
-    AnswerA: "AnswerA",
-    AnswerB: "AnswerB",
-    AnswerC: "AnswerC",
-    AnswerD: "AnswerD",
-    correct: "AnswerB"
+    question: "There are ___ islands in Hawaii",
+    AnswerA: "7",
+    AnswerB: "8",
+    AnswerC: "9",
+    AnswerD: "10",
+    correct: "8"
 },
 {
-    question: "Question6",
-    AnswerA: "AnswerA",
-    AnswerB: "AnswerB",
-    AnswerC: "AnswerC",
-    AnswerD: "AnswerD",
-    correct: "AnswerB"
+    question: "Bora Bora is a part of which country?",
+    AnswerA: "Polynesia",
+    AnswerB: "France",
+    AnswerC: "The Netherlands",
+    AnswerD: "New Zealand",
+    correct: "France"
 },
  {
-    question: "Question7",
-    AnswerA: "AnswerA",
-    AnswerB: "AnswerB",
-    AnswerC: "AnswerC",
-    AnswerD: "AnswerD",
-    correct: "AnswerD"
+    question: "St. Maartin is split between which two countries?",
+    AnswerA: "France and Germany",
+    AnswerB: "Germany and England",
+    AnswerC: "France and The Netherlands",
+    AnswerD: "The Netherlands and Belgium",
+    correct: "France and The Netherlands"
 },
 {
-    question: "Question8",
-    AnswerA: "AnswerA",
-    AnswerB: "AnswerB",
-    AnswerC: "AnswerC",
-    AnswerD: "AnswerD",
-    correct: "AnswerA"
+    question: "Jamaica is home to how many different species of Orchids?",
+    AnswerA: "200",
+    AnswerB: "300",
+    AnswerC: "400",
+    AnswerD: "500",
+    correct: "200"
 }];
 
 var number = 30;
