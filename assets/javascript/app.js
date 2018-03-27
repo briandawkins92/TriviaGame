@@ -95,12 +95,10 @@ $("#start-button").on("click", function() {
      console.log(number);
      $("#display").html( "Time Remaining:" + number);  
     }
+    var i = Math.floor(Math.random () * 8);
 
 
-       var i = Math.floor(Math.random () * 8);
 
-
-     console.log(i);
 function questionText () {
     $("#display").html( "Time Remaining:" + number);  
     $("#question").text(questions[i].question);  
@@ -140,7 +138,6 @@ $("button").on("click", function () {
             setTimeout (nextQuestion, 3000);
             function nextQuestion () {
                 i = Math.floor(Math.random () * 8);
-                console.log(i);
                 questionText (i);
                 number = 30;
                 $("#winner").hide();
